@@ -1,0 +1,72 @@
+<header class="header" >
+  <div class="burger-menu">
+    <div class="burger-menu__header">
+      <img class="header_burger-menu" (click)="closeBurgerMenu()" src="assets/icons/burger-menu.svg">
+      <button class="btn_online-registration" type="button">Онлайн запись</button>
+    </div>
+    <div class="burger-menu__nav">
+      <div class="burger-menu__nav-titles">
+        <ul>
+          <li routerLink="/services">Услуги</li>
+          <li>Акции</li>
+          <li>Обучение</li>
+          <li>Сертификаты</li>
+          <li>О нас</li>
+          <li>Контакты</li>
+        </ul>
+        <div class="vertical-line"></div>
+        <div class="burger-menu__nav-additional-titles">
+          <ul>
+            <li>Ресницы</li>
+            <li>Брови</li>
+            <li>Аппаратная косметология</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="burger-menu__footer">
+      <p>+375(44) 543-57-80</p>
+      <div class="burger-menu__icons">
+        <img src="assets/icons/inst.svg">
+        <img src="assets/icons/tg.svg">
+      </div>
+    </div>
+  </div>
+  <button class="header__btn">
+    <img class="header_burger-menu" (click)="openBurgerMenu()" src="assets/icons/burger-menu.svg">
+  </button>
+  <img class="logo" src="assets/icons/logo.svg">
+  <button class="btn_online-registration" type="button" (click)="openRegistrationMenu()">Онлайн запись</button>
+  <div class="online-registration">
+    <div class="online-registration__header">
+      <img src="assets/icons/logo.svg" (click)="closeRegistrationMenu()" alt="">
+    </div>
+    <div class="online-registration__main">
+      <div class="online-registration__menu">
+        <p>Выбрать мастера</p>
+      </div>
+      <div class="online-registration__menu">
+        <p>Выбрать услугу</p>
+      </div>
+    </div>
+    <div class="online-registration__footer">
+      <div class="footer-info-contacts">
+        <img id="map_pin" src="assets/icons/map-pin.svg">
+        <p>г.Гомель ул.Жарковского 26 кабинет 67</p>
+      </div>
+      <div class="footer-info-contacts">
+        <img id="phone" src="assets/icons/phone.svg">
+        <p>+375(44) 543-57-80</p>
+      </div>
+      <div class="footer-info-contacts">
+        <img id="clock" src="assets/icons/clock.svg">
+        <p>пн-вс 10:00 — 18:00</p>
+      </div>
+    </div>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="overlay hidden"></div>
+</header>

@@ -1059,6 +1059,10 @@ hr{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  & li:hover{
+    color: #1A1619;
+    opacity: 0.5;
+  }
 }
 .burger-menu__nav-additional-titles{
   font-family: 'Playfair Display';
@@ -1148,4 +1152,225 @@ hr{
 .show{
   opacity: 1;
   visibility: visible;
+}
+.choice-of-services{
+  position: fixed;
+  top:0;
+  right: 29%;
+  background: #EBE9F0;
+  height: 100vh;
+  width: 36.5%;
+  padding: rem(36px) rem(30px);
+}
+
+.choice-of-services {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16px);
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 33px;
+
+  color: #000000;
+  div{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+}
+
+.service{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  /* identical to box height, or 28px */
+
+  letter-spacing: 0.005em;
+
+  /* outline/ black */
+
+  color: #080708;
+
+}
+
+.offer__information{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  img{
+    border-radius: rem(20px);
+    width: rem(495px);
+    height: rem(413px);
+  }
+  h1{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 67px;
+    color: #1A1619;
+  }
+  p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    color: #000000;
+  }
+  ul li{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    color: #000000;
+    &:before{
+      content: "\2022";
+      color: #B356A9;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: 0.1em;
+      font-size: rem(40px);
+      position: relative;
+      top: 0.12em;
+    }
+  }
+}
+.gap{
+  margin-top: rem(32px);
+  margin-bottom: rem(32px);
+}
+
+.gap-bottom{
+  margin-bottom: rem(44px);
+}
+
+.gap-bottom-normal{
+  margin-bottom: rem(32px);
+}
+.offer__image{
+  display: flex;
+  justify-content: flex-end;
+}
+.offer__advantages-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: rem(20px);
+}
+.offer__advantages-card{
+  display: flex;
+  justify-content: space-between;
+}
+.offer__advantages-number{
+  width: rem(34px);
+  margin-right: rem(24px);
+
+  div{
+    background: #EBE9F0;
+    width: rem(34px);
+    height: rem(34px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    p{
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 500;
+      font-size: rem(21px);
+      line-height: rem(28px);
+      letter-spacing: 0.0015em;
+      color: #1A1619;
+
+    }
+  }
+
+}
+.offer__advantages-points{
+  h3{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: 0.0015em;
+    color: #1A1619;
+    margin-bottom: rem(16px);
+  }
+  p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.0025em;
+    color: #1A1619;
+  }
+}
+.offer__advantages{
+  h2{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    letter-spacing: 0.0015em;
+    color: #B356A9;
+  }
+}
+.new-point{
+  margin-top: rem(100px);
+}
+.new-paragraph{
+  margin-top: rem(64px);
+}
+.offer__questions{
+  h2{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+    color: #B356A9;
+  }
+}
+.offer__questions-list{
+  display: flex;
+  flex-direction: column;
+  gap: rem(28px);
+}
+.offer__gallery{
+  h2{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 28px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+
+    /* Primary */
+
+    color: #B356A9;
+  }
+}
+.offer__gallery-photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: rem(20px);
+  img{
+    width: rem(392px);
+    height: rem(392px);
+  }
 }

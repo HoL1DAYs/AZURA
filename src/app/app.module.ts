@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OffersComponent } from './offers/offers.component';
 import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import { OfferPageComponent } from './offer-page/offer-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {AppRoutingModule} from "./app-routing.module";
     HeaderComponent,
     MainPageComponent,
     FooterComponent,
-    OffersComponent
+    OffersComponent,
+    OfferPageComponent
   ],
   imports: [
     BrowserModule,

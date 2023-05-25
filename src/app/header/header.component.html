@@ -38,85 +38,970 @@
   <img class="logo" src="assets/icons/logo.svg">
   <button class="btn_online-registration" type="button" (click)="openRegistrationMenu()">Онлайн запись</button>
   <div class="online-registration">
-    <div class="online-registration__header">
-      <img src="assets/icons/logo.svg" (click)="closeRegistrationMenu()" alt="">
+    <div class="online-registration-main">
+      <div class="online-registration__header">
+        <img src="assets/icons/logo.svg" (click)="closeRegistrationMenu()" alt="">
+      </div>
+      <div class="online-registration__main">
+        <div class="online-registration__menu" (click)="openChoiceOfMastersMenu()">
+          <p>Выбрать мастера</p>
+        </div>
+        <div class="online-registration__menu" (click)="openChoiceOfServicesMenu()">
+          <p>Выбрать услугу</p>
+        </div>
+      </div>
+      <div class="online-registration__footer">
+        <div class="footer-info-contacts">
+          <img id="map_pin" src="assets/icons/map-pin.svg">
+          <p>г.Гомель ул.Жарковского 26 кабинет 67</p>
+        </div>
+        <div class="footer-info-contacts">
+          <img id="phone" src="assets/icons/phone.svg">
+          <p>+375(44) 543-57-80</p>
+        </div>
+        <div class="footer-info-contacts">
+          <img id="clock" src="assets/icons/clock.svg">
+          <p>пн-вс 10:00 — 18:00</p>
+        </div>
+      </div>
     </div>
-    <div class="online-registration__main">
-      <div class="online-registration__menu">
-        <p>Выбрать мастера</p>
-      </div>
-      <div class="online-registration__menu">
-        <p>Выбрать услугу</p>
-      </div>
-    </div>
-    <div class="online-registration__footer">
-      <div class="footer-info-contacts">
-        <img id="map_pin" src="assets/icons/map-pin.svg">
-        <p>г.Гомель ул.Жарковского 26 кабинет 67</p>
-      </div>
-      <div class="footer-info-contacts">
-        <img id="phone" src="assets/icons/phone.svg">
-        <p>+375(44) 543-57-80</p>
-      </div>
-      <div class="footer-info-contacts">
-        <img id="clock" src="assets/icons/clock.svg">
-        <p>пн-вс 10:00 — 18:00</p>
-      </div>
-    </div>
-    <div class="choice-of-services">
+    <div class="choice-of-services hidden">
       <div>
         <span>Выберите услугу</span>
         <img src="assets/icons/chevron.svg" alt="">
       </div>
       <div class="offers__offer service">
-        <span>Массаж</span>
+        <div class="offers__offer-main">
+          <span>Массаж</span>
+          <img src="assets/icons/chevron.svg" alt="">
+        </div>
+        <ul class="offers__list-detailed">
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+        </ul>
+      </div>
+      <div class="offers__offer service">
+        <div class="offers__offer-main">
+          <span>Массаж</span>
+          <img src="assets/icons/chevron.svg" alt="">
+        </div>
+        <ul class="offers__list-detailed">
+          <hr>
+          <div class="offers__list-main">
+            <div>
+              <div>
+                <h2>Криополиз</h2>
+              </div>
+              <img src="assets/icons/chevron.svg" alt="">
+            </div>
+            <ul class="offers__list-detailed">
+              <li>Rf-лифтинг тела:
+                <ul>
+                  <li>
+                    <hr>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                </ul>
+              </li>
+              <li>Rf-лифтинг лица:
+                <ul>
+                  <li>
+                    <hr>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <hr>
+          <li>
+            <div>
+              <div>
+                <div>
+                  <h2>Криополиз</h2>
+                </div>
+                <img src="assets/icons/chevron.svg" alt="">
+              </div>
+              <ul class="offers__list-detailed">
+                <li>Rf-лифтинг тела:
+                  <ul>
+                    <li>
+                      <hr>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                  </ul>
+                </li>
+                <li>Rf-лифтинг лица:
+                  <ul>
+                    <li>
+                      <hr>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+        </ul>
+      </div>
+      <div class="choice-of-masters-btn" (click)="openChoiceOfMastersMenu()">
+        <p>Перейти к выбору мастера</p>
+      </div>
+
+    </div>
+    <div class="choice-of-services hidden">
+      <div>
+        <span>Выберите услугу</span>
         <img src="assets/icons/chevron.svg" alt="">
       </div>
       <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
+        <div class="offers__offer-main">
+          <span>Массаж</span>
+          <img src="assets/icons/chevron.svg" alt="">
+        </div>
+        <ul class="offers__list-detailed">
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+        </ul>
       </div>
       <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
+        <div class="offers__offer-main">
+          <span>Массаж</span>
+          <img src="assets/icons/chevron.svg" alt="">
+        </div>
+        <ul class="offers__list-detailed">
+          <hr>
+          <div class="offers__list-main">
+            <div>
+              <div>
+                <h2>Криополиз</h2>
+              </div>
+              <img src="assets/icons/chevron.svg" alt="">
+            </div>
+            <ul class="offers__list-detailed">
+              <li>Rf-лифтинг тела:
+                <ul>
+                  <li>
+                    <hr>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                  <li>
+
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                </ul>
+              </li>
+              <li>Rf-лифтинг лица:
+                <ul>
+                  <li>
+                    <hr>
+                    <div class="form-check">
+                      <div class="form-check-label">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Аппаратный маникюр
+                        </label>
+                        <div>
+                          <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                        </div>
+                      </div>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    </div>
+                    <hr>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <hr>
+          <li>
+            <div>
+              <div>
+                <div>
+                  <h2>Криополиз</h2>
+                </div>
+                <img src="assets/icons/chevron.svg" alt="">
+              </div>
+              <ul class="offers__list-detailed">
+                <li>Rf-лифтинг тела:
+                  <ul>
+                    <li>
+                      <hr>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                  </ul>
+                </li>
+                <li>Rf-лифтинг лица:
+                  <ul>
+                    <li>
+                      <hr>
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                    <li>
+
+                      <div class="offers__list-card">
+                        <span>внутренняя поверхность рук</span>
+                        <span>20 минут</span>
+                        <span>45 ₽</span>
+                      </div>
+                      <hr>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+          <li>
+            <div class="form-check">
+              <div class="form-check-label">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Аппаратный маникюр
+                </label>
+                <div>
+                  <p> <span class="form-check-price">17 Br </span> <span class="form-check-duration">10-20 мин</span> </p>
+                </div>
+              </div>
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </li>
+          <hr>
+        </ul>
       </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
+      <div class="choice-of-masters-btn" (click)="openChoiceOfMastersMenu()">
+        <p>Перейти к выбору мастера</p>
       </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
+
+    </div>
+    <div class="online-registration__calendar hidden">
+      <div class="online-registration__calendar-calendar">
+        <div class="online-registration__calendar-month">
+          <img class="left-chevron" src="assets/icons/chevron.svg" alt="">
+          <p>МАЙ</p>
+          <img src="assets/icons/chevron.svg" alt="">
+        </div>
+        <div class="online-registration__calendar-dates">
+          <span>пн</span>
+          <span>вт</span>
+          <span>ср</span>
+          <span>чт</span>
+          <span>пт</span>
+          <span>сб</span>
+          <span>вс</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+          <span>12</span>
+          <span>13</span>
+          <span>14</span>
+          <span>15</span>
+          <span>16</span>
+          <span>17</span>
+          <span>18</span>
+          <span>19</span>
+          <span>20</span>
+          <span>21</span>
+          <span>22</span>
+          <span>23</span>
+          <span>24</span>
+          <span>25</span>
+          <span>26</span>
+          <span>27</span>
+          <span>28</span>
+          <span>29</span>
+          <span>30</span>
+        </div>
       </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
-      </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
-      </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
-      </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
-      </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
-      </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
-      </div>
-      <div class="offers__offer service">
-        <span>Массаж</span>
-        <img src="assets/icons/chevron.svg" alt="">
+      <div class="online-registration__time">
+        <div class="online-registration__time-date">
+          <p>7 мая, четверг</p>
+        </div>
+        <div class="online-registration__time-block">
+          <div class="online-registration__time-of-the-day">
+            <div class="time-card" (click)="openCheckPopup()"><p>09:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>09:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>10:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>11:00</p></div>
+          </div>
+          <hr class="online-registration-hr">
+          <div class="online-registration__time-of-the-day">
+            <div class="time-card" (click)="openCheckPopup()"><p>12:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>12:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>13:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>13:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>14:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>14:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>15:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>15:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>16:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>16:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>17:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>17:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>18:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>18:30</p></div>
+          </div>
+          <hr class="online-registration-hr">
+          <div class="online-registration__time-of-the-day">
+            <div class="time-card inactive" (click)="openCheckPopup()"><p>19:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>19:30</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>20:00</p></div>
+            <div class="time-card" (click)="openCheckPopup()"><p>20:30</p></div>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="confirmation-popup hidden">
+      <div class="confirmation-message">
+        <img src="assets/icons/accept.svg" alt="">
+        <p>Проверьте вашу запись</p>
+      </div>
+      <div>
+        <div class="user-information">
+          <p>14 мая 2023   13:30</p>
+          <div class="user-name">
+            <img src="assets/icons/user.svg" alt="">
+            <p>Виолетта</p>
+          </div>
+        </div>
+        <div class="service-information">
+          <h1>RF-лифтинг</h1>
+          <p>Внутренняя поверхность рук</p>
+        </div>
+        <div class="service-information">
+          <h1>RF-лифтинг</h1>
+          <p>Внутренняя поверхность рук</p>
+        </div>
+      </div>
+      <div class="confirmation-popup-btns">
+        <button class="confirmation-popup-btn-cancel">Отменить</button>
+        <button class="confirmation-popup-btn-accept" (click)="openForm()">Все верно</button>
+      </div>
+    </div>
+    <div class="choice-of-masters hidden">
+      <div>
+        <span>Выберите мастера</span>
+        <img src="assets/icons/chevron.svg" alt="">
+      </div>
+      <div class="any-master">
+        <p>Любой мастер</p>
+        <img src="assets/icons/chevron.svg" alt="">
+      </div>
+      <div class="select-master" (click)="openOnlineRegistration()">
+        <img class="circle-img" src="assets/images/img_13.png" alt="">
+        <div class="master-card">
+          <div>
+            <h2>Виолетта</h2>
+            <p>Мастер бровист, лешмейкер, визажист</p>
+          </div>
+          <img src="assets/icons/chevron.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="total hidden">
+      <div class="total__title">
+        <p class="total__services">Услуги:</p>
+        <hr>
+        <div class="total__info">
+          <h1>14 мая 2023   13:30</h1>
+          <p>RF-лифтинг</p>
+          <p>Внутренняя поверхность рук</p>
+          <p><span>17 Br </span><span>10-20 мин</span></p>
+        </div>
+      </div>
+      <div>
+        <hr class="flex-hr">
+        <div class="total__amount">
+          <span>Итого:</span>
+          <span>17 Br</span>
+        </div>
+      </div>
+    </div>
+    <div class="customer-info hidden">
+      <div>
+        <h1>Ваши данные</h1>
+        <div class="customer-form">
+          <div>
+            <h2>Имя *</h2>
+            <input type="text" placeholder="Введите имя">
+          </div>
+        </div>
+        <div class="customer-form">
+          <div>
+            <h2>Телефон *</h2>
+            <input type="text" placeholder="Введите телефон">
+          </div>
+        </div>
+        <div class="customer-form">
+          <div>
+            <h2>E-mail</h2>
+            <input type="text" placeholder="Введите E-mail">
+          </div>
+        </div>
+        <div class="customer-form">
+          <div>
+            <h2>Комментарий</h2>
+            <input type="text" placeholder="Комментарий к записи">
+          </div>
+        </div>
+        <div class="customer-form">
+          <div>
+            <h2>Напоминание к записи</h2>
+            <input type="search" placeholder="За 24 часа">
+          </div>
+        </div>
+        <div class="customer-form-radio">
+          <input type="checkbox">
+          <p>Нажимая «Записаться», вы принимаете Пользовательское соглашение и Политику конфиденциальности.</p>
+        </div>
+      </div>
+      <div class="customer-form-btn" (click)="openSamary()">
+        <button>Записаться</button>
+      </div>
+    </div>
+    <div class="confirmation-card hidden">
+      <div class="confirmation-popup-card">
+        <div class="confirmation-message margin-gap">
+          <img src="assets/icons/accept.svg" alt="">
+          <p>Вы записаны</p>
+        </div>
+        <div class="total-confirmation">
+          <div class="total__title confirmation-title">
+            <img src="assets/icons/logo.svg">
+            <p class="total__services">г. Гомель ул. Жарковского 26 кабинет 67</p>
+            <hr>
+            <div class="total__info">
+              <h1>14 мая 2023   13:30</h1>
+              <p>RF-лифтинг</p>
+              <p>Внутренняя поверхность рук</p>
+              <p><span>17 Br </span><span>10-20 мин</span></p>
+            </div>
+          </div>
+          <div>
+            <hr class="flex-hr">
+            <div class="total__amount">
+              <span>Итого:</span>
+              <span>17 Br</span>
+            </div>
+          </div>
+        </div>
+        <p id="see-you-soon">До встречи в салоне!</p>
+        <div class="confirmation-popup-btns gap-btns">
+          <button class="confirmation-popup-btn-cancel" (click)="closeRegistration()">На главную</button>
+          <button class="confirmation-popup-btn-accept">Записаться ещё</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="popup-overlay hidden"></div>
   </div>
   <div class="overlay hidden"></div>
+
 </header>

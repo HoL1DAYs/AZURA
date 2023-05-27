@@ -326,15 +326,15 @@ body{
 #img_3{
 
   position: absolute;
-  width: 100%;
-  height: rem(550px);
-  left: 0;
+  width: 100vw;
+  height: rem(800px);
+  left: rem(-350px);
   top: rem(0px);
 
 }
 .img_3{
   margin-top: rem(100px);
-  height: rem(550px);
+  height: rem(800px);
   position: relative;
 }
 .img_3_slider, .img_6_slider{
@@ -363,16 +363,16 @@ body{
 #img_6{
   position: absolute;
 
-  width: 100%;
-  height: rem(550px);
-  left: 0;
+  width: 100vw;
+  height: rem(800px);
+  left: rem(-350px);
   top: rem(0px);
 
 }
 
 .img_6{
   margin-top: rem(100px);
-  height: rem(550px);
+  height: rem(800px);
   position: relative;
 
 }
@@ -881,6 +881,9 @@ body{
   line-height: rem(43px);
   letter-spacing: 0.0025em;
   color: #1A1619;
+  button{
+    display: none;
+  }
 }
 
 .burger-menu__footer {
@@ -1066,6 +1069,14 @@ hr{
   & li:hover{
     color: #1A1619;
     opacity: 0.5;
+  }
+  img{
+    display: none;
+  }
+  ul{
+    ul{
+      display: none;
+    }
   }
 }
 .burger-menu__nav-additional-titles{
@@ -1703,7 +1714,7 @@ hr{
 
 }
 .any-master{
-  background: #D9B6F5;
+  background: #F8F5FA;
   border-radius: 20px;
   padding: 16px 22px;
   width: rem(431px);
@@ -2098,7 +2109,7 @@ hr{
   background: #B356A9;
   color: #FCF7FC;
   height: rem(80px);
-  width: rem(697px);
+  width: 100%;
   margin: 0 rem(-30px);
   p{
     font-family: 'Montserrat';
@@ -2122,7 +2133,7 @@ hr{
   right: 0;
   background: #F8F5FA;
   height: 100vh;
-  width: 29%;
+
 }
 .zero-height{
   height: 0;
@@ -2130,6 +2141,68 @@ hr{
 
 
 @media screen and (max-width: 62.5em) {
+  .burger-menu__header{
+    button{
+      display: none;
+    }
+  }
+
+  .burger-menu__nav-titles{
+    img{
+      display: inline-block;
+    }
+    .sub_ul{
+      font-family: 'Playfair Display';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 28px;
+      /* identical to box height */
+      padding-left: 10px;
+
+      letter-spacing: 0.0015em;
+
+      /* text/black */
+
+      color: #1A1619;
+    }
+
+  }
+  .vertical-line{
+    display: none;
+  }
+  .burger-menu__nav-additional-titles{
+    display: none;
+  }
+  .confirmation-popup-card{
+    left: -170%;
+  }
+  .customer-info{
+
+    width: 200%;
+    left: -250%;
+    z-index: 7;
+  }
+  .online-registration__calendar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    width: 56.5%;
+    right: 43.5%;
+    z-index: 6;
+  }
+  .choice-of-masters{
+    left: 0;
+    width: 56.5%;
+    right: 43.5%;
+  }
+  .choice-of-services{
+    left: 0;
+    width: 56.5%;
+    right: 43.5%;
+  }
+
   .logo{
     height: 70px;
     width: 135px;
@@ -2270,6 +2343,37 @@ hr{
 
 }
 @media screen and (max-width: 48em) {
+  .burger-menu__nav{
+    button{
+      display: inline-block;
+    }
+  }
+  .confirmation-popup-card{
+    left: -210%;
+  }
+  .customer-info{
+    z-index: 12;
+    width: 350%;
+  }
+  .online-registration__calendar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+  }
+  .choice-of-services{
+    z-index: 9;
+    width: 100%;
+  }
+  .choice-of-masters{
+    z-index: 10;
+    width: 100%;
+    div{
+      width: 100%;
+    }
+  }
   #logo{
     width: 135px;
     height: 70px;

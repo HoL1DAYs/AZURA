@@ -1,6 +1,7 @@
 <div class="title_div">
   <h1 class="title">Салон красоты AZURA — премиум уход за собой в Гомеле</h1>
   <p class="description">Откройте новые грани своей красоты вместе с нами: наш салон — место, где забота о вас является  нашим приоритетом</p>
+  <p class="description_small">Откройте новые грани своей красоты вместе с нами</p>
   <img class="main_png" src="assets/images/img.png">
   <div class="rectangle"></div>
   <div class="social-media_logo">
@@ -20,9 +21,11 @@
       <img class="img_3_slider" src="assets/images/img_3.jpeg" alt="">
     </div>
   </div>
+</div>
   <div class="img_3">
     <img id="img_3" src="assets/images/img_3.jpeg" alt="">
   </div>
+<div class="content">
   <div class="about-us technologies about-us_text">
     <h1>Наши технологии</h1>
     <h2>Преобразуйте свою кожу с помощью передовых технологий аппаратной косметологии</h2>
@@ -34,9 +37,11 @@
       <img class="img_6_slider" src="assets/images/img_6.jpeg" alt="">
     </div>
   </div>
+</div>
   <div class="img_6">
     <img id="img_6" src="assets/images/img_6.jpeg" alt="">
   </div>
+<div class="content">
   <div class="about-us">
     <h1>Услуги</h1>
     <div class="services">
@@ -44,59 +49,10 @@
         <h2>Красота - это гармония, сочетание внутреннего и внешнего.
           Мы поможем сохранить эту гармонию.</h2>
       </div>
-      <div class="services_cards">
-        <img id="services_card_1" src="assets/images/img_3.png" alt="">
+      <div class="services_cards" *ngFor="let operationType of operationTypes">
+        <img id="services_card_{{operationType.id}}" src="assets/images/img_3.png" alt="">
         <div class="services_info">
-          <p class="services_info_main">Массаж</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_2" src="assets/images/img_6.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Ногти</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_3" src="assets/images/img_7.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Брови</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_4" src="assets/images/img_8.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Ресницы</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_5" src="assets/images/img_9.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Аппаратная косметология</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_6" src="assets/images/img_10.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Визаж</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_7" src="assets/images/img_11.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Мужчинам</p>
-          <p>Подробнее</p>
-        </div>
-      </div>
-      <div class="services_cards">
-        <img id="services_card_8" src="assets/images/img_12.png" alt="">
-        <div class="services_info">
-          <p class="services_info_main">Перманентный макияж</p>
+          <p class="services_info_main">{{operationType.name}}</p>
           <p>Подробнее</p>
         </div>
       </div>
@@ -104,20 +60,10 @@
     <div class="services_master">
       <h1>Наши мастера</h1>
       <div class="services_master_cards">
-        <div>
+        <div *ngFor="let master of masters">
           <img src="assets/images/img_13.png" alt="">
-          <h2>Владислава</h2>
-          <p>Косметик- эстетист, визажист, массажист, мастер педикюра</p>
-        </div>
-        <div>
-          <img src="assets/images/img_14.png" alt="">
-          <h2>Ольга</h2>
-          <p>Мастер маникюра, бровист</p>
-        </div>
-        <div>
-          <img src="assets/images/img_15.png" alt="">
-          <h2>Виолетта</h2>
-          <p>Мастер бровист, лешмейкер, визажист</p>
+          <h2>{{master.name}}</h2>
+          <p>{{master.about}}</p>
         </div>
       </div>
     </div>

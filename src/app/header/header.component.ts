@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RequestService} from "../request.service";
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   ngOnInit(){
-
+    this.getInfo()
+  }
+  constructor(private reqService: RequestService) {
   }
   // shadowSidebar(){
   //   const burgerMenu = document.querySelector( '.burger_menu');
@@ -25,6 +28,18 @@ export class HeaderComponent {
   //     }
   //   })
   // }
+
+
+  getInfo(){
+    this.reqService.getMaster().subscribe(data=>{
+      console.log(data)
+    })
+    this.reqService.getEntry().subscribe(data=>{
+      console.log(data)
+    })
+  }
+
+
   openRegistrationMenu(){
     const registrationMenu = document.querySelector('.online-registration')
     const overlay = document.querySelector('.overlay')
@@ -131,4 +146,5 @@ export class HeaderComponent {
     confirmationCard.classList.add('hidden')
     overlay.classList.add('hidden')
   }
+
 }

@@ -42,9 +42,7 @@ body{
   max-width: 1220px;
   margin: 0 auto;
 }
-:root{
-  @include adaptive-font(16, 16);
-}
+
 
 .header{
   padding: rem(15px) rem(40px);
@@ -194,7 +192,8 @@ body{
 
 .title_div{
   position: relative;
-  height: rem(973px);
+  height: 100vh;
+  overflow: hidden;
 }
 
 .footer-info{
@@ -328,9 +327,8 @@ body{
   position: absolute;
   width: 100vw;
   height: rem(800px);
-  left: rem(-350px);
+  left: 0;
   top: rem(0px);
-
 }
 .img_3{
   margin-top: rem(100px);
@@ -365,7 +363,7 @@ body{
 
   width: 100vw;
   height: rem(800px);
-  left: rem(-350px);
+  left: 0;
   top: rem(0px);
 
 }
@@ -373,6 +371,7 @@ body{
 .img_6{
   margin-top: rem(100px);
   height: rem(800px);
+  left: 0;
   position: relative;
 
 }
@@ -591,6 +590,9 @@ body{
     flex-grow: 0;
   }
 }
+.description_small{
+  display: none;
+}
 
 #btn_1{
   position: absolute;
@@ -612,11 +614,13 @@ body{
   border: none;
 }
 .feedback_cards{
+  min-width: 960px;
   display: flex;
   flex-direction: row;
   gap: rem(20px);
   align-items: center;
   justify-content: center;
+
 }
 
 .feedback_card{
@@ -627,7 +631,6 @@ body{
   justify-content: center;
 
   gap: rem(20px);
-  isolation: isolate;
 
   width: 100%;
   height: rem(235px);
@@ -816,6 +819,8 @@ body{
 
 .services_master{
   width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .wrapper{
@@ -2138,13 +2143,58 @@ hr{
 .zero-height{
   height: 0;
 }
+#registration{
+  display: none;
+  background-color: rgba(178, 86, 169, 1);
+  border-radius: rem(12px);
+  font-style: normal;
+  color: #FCF7FC;
+  border: none;
+  width: 86px;
+  height: 37px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
 
+  letter-spacing: 0.0125em;
 
+  /* text/write */
+
+  color: #FCF7FC;
+}
+
+@media screen and (min-width: 62.5em) and (max-width: 120em){
+  :root{
+    @include adaptive-font(16, 12);
+  }
+}
 @media screen and (max-width: 62.5em) {
+  .offer__gallery-photos{
+    img{
+      width: 300px;
+      height: 300px;
+    }
+    div{
+      width: 300px;
+      height: 300px;
+    }
+  }
+  .rectangle{
+    width: rem(911px);
+  }
+
   .burger-menu__header{
     button{
       display: none;
     }
+  }
+  .offer__advantages-list{
+    grid-template-columns: 1fr 1fr;
+    max-width: 598px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .burger-menu__nav-titles{
@@ -2226,7 +2276,7 @@ hr{
   .title{
     left: 2%;
     width: 608px;
-    top: 456px;
+    top: 356px;
   }
   .social-media_logo{
     left: 20px;
@@ -2243,7 +2293,7 @@ hr{
     left: 630px;
   }
   .main_png{
-    bottom: 0vh;
+    bottom: 0;
     left: 55%;
     width: 628px;
     height: 785px;
@@ -2253,7 +2303,7 @@ hr{
     width: 703px;
     height: 56px;
     left: 2%;
-    top: 683px;
+    top: 583px;
   }
   .services{
     grid-template-columns: 1fr 1fr;
@@ -2343,6 +2393,32 @@ hr{
 
 }
 @media screen and (max-width: 48em) {
+  .content{
+    margin-top: rem(100px);
+  }
+  .rectangle{
+    width: rem(741px);
+  }
+  :root{
+    font-size: 14px;
+  }
+  .offer__gallery-photos{
+    max-width: 659px;
+    grid-template-columns: 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .offer__information{
+    grid-template-columns: 1fr;
+  }
+  .offer__image{
+    justify-content: center;
+    margin-top: 80px;
+    img{
+      width: 728px;
+      height: 500px;
+    }
+  }
   .burger-menu__nav{
     button{
       display: inline-block;
@@ -2447,7 +2523,6 @@ hr{
   }
   .social-media_logo{
     left: 20px;
-    top: 660px;
   }
   #img_4{
     position: static;
@@ -2465,10 +2540,9 @@ hr{
   }
   .main_png{
     position: absolute;
-    width: 558px;
-    height: 697px;
-    right: -761px;
-    top: 27px;
+
+    height: 597px;
+    left: 49%;
   }
   .description{
     position: absolute;
@@ -2556,8 +2630,7 @@ hr{
     margin-bottom: 100px;
   }
   .feedback_cards{
-    overflow-x: scroll;
-    width: 960px;
+    overflow: auto;
     #btn_1{
       display: none;
     }
@@ -2567,6 +2640,7 @@ hr{
   }
   .feedback_card{
     justify-content: flex-end;
+    width: 460px;
     div{
       width: 376px;
       margin-right: 22px;
@@ -2588,12 +2662,31 @@ hr{
 
   }
   .title_div{
-
     height: 610px;
   }
 
 }
 @media screen and (max-width: 30em) {
+
+  .rectangle{
+    width: rem(571px);
+  }
+
+  .offer__image{
+    justify-content: center;
+    margin-top: 60px;
+    img{
+      width: 440px;
+      height: 300px;
+    }
+  }
+  .offer__gallery-photos{
+    grid-template-columns: 1fr;
+    div{
+     margin: 0 auto;
+    }
+
+  }
   .header{
     padding: 11px 20px;
   }
@@ -2736,7 +2829,7 @@ hr{
   }
   .social-media_logo{
     left: 20px;
-    top: 660px;
+
   }
   #img_4{
     position: static;
@@ -2755,9 +2848,9 @@ hr{
   .main_png{
     position: absolute;
     width: 558px;
-    height: 697px;
-    right: -463px;
-    top: -5px;
+    height: 620px;
+    left: 45%;
+
 
   }
 
@@ -2828,7 +2921,7 @@ hr{
   }
   .feedback_cards{
     overflow: auto;
-    width: 960px;
+    width: 560px;
     #btn_1{
       display: none;
     }
@@ -2837,7 +2930,7 @@ hr{
     }
   }
   .feedback_card{
-
+    width: 471px;
     justify-content: flex-end;
     div{
       width: 376px;
@@ -2864,4 +2957,74 @@ hr{
     height: 610px;
   }
 
+}
+@media screen and (max-width: 23em) {
+  .title{
+   font-size: 21px;
+  }
+  .description{
+    display: none;
+  }
+  .description_small{
+    display: inline-block;
+    z-index: 2;
+    position: absolute;
+    width: 263px;
+    height: 52px;
+    left: 5%;
+    top: 393px;
+
+    /* Body 2 */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    letter-spacing: 0.005em;
+
+    /* text/black */
+
+    color: #1A1619;
+  }
+
+  .main_png{
+    left: 40%;
+  }
+  :root{
+    font-size: 12px;
+  }
+  .offer__image{
+    max-width: 140%;
+    min-width: 320px;
+    min-height: 215px;
+  }
+  .offer__advantages-list{
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #registration{
+    display: inline-block;
+  }
+  .btn_online-registration{
+    display: none;
+  }
+  .logo{
+    margin-right: -20px;
+  }
+  .offer__information{
+    h1{
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 28px;
+    }
+    p{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
 }

@@ -9,6 +9,7 @@ import { OffersComponent } from './offers/offers.component';
 import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { OfferPageComponent } from './offer-page/offer-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OfferPageComponent } from './offer-page/offer-page.component';
   imports: [
     BrowserModule,
     RouterOutlet,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

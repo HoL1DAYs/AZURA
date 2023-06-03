@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {RequestService} from "../request.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -10,7 +11,7 @@ export class HeaderComponent {
   ngOnInit(){
     this.getInfo()
   }
-  constructor(private reqService: RequestService) {
+  constructor(private reqService: RequestService, private route: ActivatedRoute) {
   }
   // shadowSidebar(){
   //   const burgerMenu = document.querySelector( '.burger_menu');
@@ -38,6 +39,10 @@ export class HeaderComponent {
       console.log(data)
     })
   }
+  registrAgain(){
+    this.closeRegistration();
+    this.openRegistrationMenu();
+  }
 
 
   openRegistrationMenu(){
@@ -50,6 +55,8 @@ export class HeaderComponent {
     overlay.classList.remove('hidden')
     registrationMenu.classList.add("show")
   }
+
+
   closeRegistrationMenu(){
     const registrationMenu = document.querySelector('.online-registration')
     const overlay = document.querySelector('.overlay')
@@ -59,6 +66,7 @@ export class HeaderComponent {
     registrationMenu.classList.remove("show")
   }
 
+
   openBurgerMenu() {
     const burger_menu = document.querySelector('.burger-menu')
     const overlay = document.querySelector('.overlay')
@@ -66,6 +74,8 @@ export class HeaderComponent {
     overlay.classList.remove('hidden')
     burger_menu.classList.add("show")
   }
+
+
   closeBurgerMenu(){
 
     const burger_menu = document.querySelector('.burger-menu')
@@ -76,13 +86,19 @@ export class HeaderComponent {
 
   }
 
+
   openChoiceOfServicesMenu(){
     const choiceOfServicesMenu = document.querySelector('.choice-of-services')
-    const totalMenu = document.querySelector('.total')
+    const totalMenu = document.querySelector('.online-registration-main-total')
+    const main = document.querySelector('.online-registration-main')
+
 
     totalMenu.classList.remove('hidden')
     choiceOfServicesMenu.classList.remove('hidden')
+    main.classList.add('hidden')
   }
+
+
   openChoiceOfMastersMenu(){
     const choiceOfMastersMenu = document.querySelector('.choice-of-masters')
     const choiceOfServicesMenu = document.querySelector('.choice-of-services')
@@ -90,11 +106,13 @@ export class HeaderComponent {
     choiceOfServicesMenu.classList.add('hidden')
   }
 
+
   displayChoiceOfMastersBtn(){
     const btn = document.querySelector('.choice-of-masters-btn')
 
     btn.classList.remove('hidden')
   }
+
 
   openOnlineRegistration(){
     const calendar = document.querySelector('.online-registration__calendar')
@@ -107,6 +125,14 @@ export class HeaderComponent {
     const popupOverlay = document.querySelector('.popup-overlay')
     popup.classList.remove('hidden')
     popupOverlay.classList.remove('hidden')
+
+
+  }
+  closeCheckPopup(){
+    const popup   = document.querySelector('.confirmation-popup')
+    const popupOverlay = document.querySelector('.popup-overlay')
+    popup.classList.add('hidden')
+    popupOverlay.classList.add('hidden')
 
 
   }
@@ -129,7 +155,7 @@ export class HeaderComponent {
     const onlineRegistration= document.querySelector('.online-registration')
     const onlineRegMain = document.querySelector('.online-registration-main')
     const confirmationCard = document.querySelector('.confirmation-card')
-    const totalMenu = document.querySelector('.total')
+    const totalMenu = document.querySelector('.online-registration-main-total')
     totalMenu.classList.add('hidden')
     choiceOfMastersMenu.classList.add('hidden')
     choiceOfServicesMenu.classList.add('hidden')
@@ -138,6 +164,7 @@ export class HeaderComponent {
     confirmationCard.classList.remove('hidden')
     onlineRegistration.classList.add('zero-height')
   }
+
   closeRegistration(){
     const registrationMenu = document.querySelector('.online-registration')
     const confirmationCard = document.querySelector('.confirmation-card')

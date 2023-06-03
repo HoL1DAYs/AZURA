@@ -10,15 +10,15 @@ export class RequestService{
   }
 
   getEntry(master_id?: number, status?: string){
-    return this.http.get<any>('http://localhost:8080/api/v1/entry')
+    return this.http.get<any>('//localhost:8080/api/v1/entry')
   }
 
   getMaster(master_id?: number){
-    return this.http.get<any>('http://localhost:8080/api/v1/master')
+    return this.http.get<any>('//localhost:8080/api/v1/master')
   }
 
   getOperation(){
-    return this.http.get<any>('http://localhost:8080/api/v1/operation')
+    return this.http.get<any>('//localhost:8080/api/v1/operation')
   }
   getOperationType(operation_id?: number){
     return this.http.get<any>('http://localhost:8080/api/v1/type')

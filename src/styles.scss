@@ -851,6 +851,7 @@ body{
 
 
 .burger-menu {
+  overflow: auto;
   visibility: hidden;
   opacity: 0;
   background-color: #EBE9F0;
@@ -860,7 +861,7 @@ body{
   justify-content: space-between;
   top: 0;
   left: 0;
-  width: 42%;
+  width: calc(23% + 350px);
   z-index: 3;
   height: 100vh;
 }
@@ -869,11 +870,13 @@ body{
   padding: rem(28px);
   display: flex;
   justify-content: space-between;
+  .logoX{
+    display: none;
+  }
 }
 
 .burger-menu__nav {
   z-index: 3;
-  margin-top: -25vh;
   display: flex;
   flex-direction: column;
   margin-left: 11.5%;
@@ -902,6 +905,9 @@ body{
     font-size: rem(40px);
     line-height: rem(49px);
     color: #1A1619;
+  }
+  button{
+    display: none;
   }
 }
 
@@ -1071,6 +1077,13 @@ hr{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  .burger-menu__nav-titles-main{
+    ul{
+      li{
+        margin-bottom: 40px;
+      }
+    }
+  }
   & li:hover{
     color: #1A1619;
     opacity: 0.5;
@@ -1097,6 +1110,9 @@ hr{
   /* text/black */
 
   color: #1A1619;
+  li{
+    margin-bottom: 20px;
+  }
 }
 .overlay{
   position: fixed;
@@ -1112,7 +1128,7 @@ hr{
 }
 .popup-overlay{
   position: fixed;
-  z-index: 9;
+  z-index: 11;
   top: 0;
   left: 0;
   width: 100%;
@@ -1490,10 +1506,15 @@ hr{
 }
 .online-registration__calendar-calendar{
   background: white;
-  width: rem(290px);
-  height: rem(270px);
+  padding-bottom: rem(10px);
   margin: rem(28px) rem(61px);
   border-radius: rem(4px);
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-size: rem(14px);
+  line-height: rem(18px);
+  color: #000000;
 }
 .online-registration__calendar-dates{
   display: grid;
@@ -1574,7 +1595,7 @@ hr{
   left: rem(-450px);
   width: rem(440px);
   height: rem(489px);
-  z-index: 11;
+  z-index: 12;
 
   background: #F8F5FA;
   border-radius: rem(20px);
@@ -1708,8 +1729,8 @@ hr{
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
-  line-height: 33px;
+  font-size: rem(25px);
+  line-height: rem(33px);
 
   color: #000000;
   div{
@@ -1722,8 +1743,11 @@ hr{
   background: #F8F5FA;
   border-radius: 20px;
   padding: 16px 22px;
-  width: rem(431px);
+  width: 100%;
   height: rem(79px);
+  p{
+
+  }
 }
 .select-master{
   display: flex;
@@ -1734,7 +1758,7 @@ hr{
   background: #F4EDFA;
   box-shadow: 0 0 rem(15px) rgba(0, 0, 0, 0.1);
   border-radius: rem(20px);
-  width: rem(431px);
+  width: 100%;
   height: rem(79px);
   img{
     margin-right: rem(25px);
@@ -1789,14 +1813,13 @@ hr{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: static;
   width: rem(400px);
   height: rem(376px);
-  left: 13.8%;
-  top: rem(239px);
   background: #EBE9F0;
   border-radius: 20px;
   padding: rem(30px) rem(24px);
+  z-index: 11;
   h1{
     font-family: 'Montserrat';
     font-style: normal;
@@ -2011,20 +2034,24 @@ hr{
 
   button{
     border-radius: 20px;
-    padding: 24px 200px;
-    margin: 0 rem(142px) rem(60px) rem(142px);
-    width: 520px;
-    height: 76px;
+    padding: 3.48% 34.8%;
+    margin: 0 15% 8% 15%;
+    width: rem(520px);
+    height: rem(76px);
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: rem(20px);
     line-height: 140%;
     /* identical to box height, or 28px */
     letter-spacing: 0.005em;
     color: #FCF7FC;
     background: #B356A9;
-
+    display: flex;
+    p{
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -2138,7 +2165,21 @@ hr{
   right: 0;
   background: #F8F5FA;
   height: 100vh;
+  width: 29%;
 
+}
+.online-registration-main-total{
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #F8F5FA;
+  height: 100vh;
+  width: 29%;
 }
 .zero-height{
   height: 0;
@@ -2165,12 +2206,28 @@ hr{
   color: #FCF7FC;
 }
 
+
 @media screen and (min-width: 62.5em) and (max-width: 120em){
   :root{
-    @include adaptive-font(16, 12);
+    @include adaptive-font(16, 8);
   }
 }
 @media screen and (max-width: 62.5em) {
+
+  .total{
+    width: rem(340px);
+  }
+  .online-registration-main-total{
+    width: 45%;
+  }
+  .online-registration-main{
+    width: 56%;
+  }
+  .burger-menu__footer{
+    p{
+      font-size: 32px;
+    }
+  }
   .offer__gallery-photos{
     img{
       width: 300px;
@@ -2185,11 +2242,7 @@ hr{
     width: rem(911px);
   }
 
-  .burger-menu__header{
-    button{
-      display: none;
-    }
-  }
+
   .offer__advantages-list{
     grid-template-columns: 1fr 1fr;
     max-width: 598px;
@@ -2225,7 +2278,7 @@ hr{
     display: none;
   }
   .confirmation-popup-card{
-    left: -170%;
+    left: -200%;
   }
   .customer-info{
 
@@ -2393,6 +2446,43 @@ hr{
 
 }
 @media screen and (max-width: 48em) {
+  .confirmation-card{
+    width: 100%;
+  }
+  .confirmation-popup{
+    top: rem(250px);
+    left: calc(-400px + 65%);
+  }
+  .customer-form-btn{
+    button{
+      padding: 24px 180px;
+      margin: 0 10% 8% 10%;
+    }
+
+  }
+  .online-registration-main{
+    width: 480px;
+  }
+  .burger-menu__header{
+    flex-direction: row-reverse;
+    .logoX{
+      display: block;
+    }
+  }
+
+
+  .burger-menu__header{
+    button{
+      display: none;
+    }
+    .header_burger-menu{
+      display: none;
+    }
+  }
+  .burger-menu{
+    width: calc(23% + 250px);
+  }
+
   .content{
     margin-top: rem(100px);
   }
@@ -2420,8 +2510,20 @@ hr{
     }
   }
   .burger-menu__nav{
+    margin-top: -90px;
+  }
+  .burger-menu__footer{
+    flex-direction: column;
+    p{
+      font-size: 24px;
+    }
     button{
       display: inline-block;
+      margin-bottom: 50px;
+      width: 209px;
+      height: 58px;
+      font-size: 20px;
+
     }
   }
   .confirmation-popup-card{
@@ -2666,7 +2768,40 @@ hr{
   }
 
 }
+@media screen and (max-width: 39em) {
+  .confirmation-popup-card{
+    left: -255%;
+    align-items: center;
+    margin-left: -40px;
+  }
+}
 @media screen and (max-width: 30em) {
+  .confirmation-popup{
+    top: rem(250px);
+    left: calc(-400px + 100%);
+  }
+  .customer-form {
+    margin: rem(40px) rem(79px) rem(32px) rem(87px);
+  }
+  .customer-form-btn{
+    button{
+      padding: 20px 136px;
+      margin: 0 10% 8% 10%;
+    }
+
+  }
+  .online-registration-main{
+    width: 100%;
+  }
+  .burger-menu{
+    width: calc(23% + 200px);
+  }
+  .burger-menu__footer{
+
+    p{
+      font-size: 18px;
+    }
+  }
 
   .rectangle{
     width: rem(571px);
@@ -2959,6 +3094,16 @@ hr{
 
 }
 @media screen and (max-width: 23em) {
+  .confirmation-popup{
+    top: rem(250px);
+    left: calc(-400px + 150%);
+  }
+  .customer-form-btn{
+    button{
+      padding: 18px 120px;
+      margin: 0 10% 8% 10%;
+    }
+  }
   .title{
    font-size: 21px;
   }

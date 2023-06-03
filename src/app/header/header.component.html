@@ -1,24 +1,27 @@
 <header class="header" >
   <div class="burger-menu">
     <div class="burger-menu__header">
+      <img class="logoX" src="assets/icons/logoX.svg" (click)="closeBurgerMenu()" alt="">
       <img class="header_burger-menu" (click)="closeBurgerMenu()" src="assets/icons/burger-menu.svg">
       <button class="btn_online-registration" type="button">Онлайн запись</button>
     </div>
     <div class="burger-menu__nav">
       <div class="burger-menu__nav-titles">
-        <ul>
-          <li routerLink="/services">Услуги<img src="assets/icons/vector.svg"></li>
-          <ul class="sub_ul">
-            <li>Ресницы</li>
-            <li>Брови</li>
-            <li>Аппаратная косметология</li>
+        <div class="burger-menu__nav-titles-main">
+          <ul>
+            <li routerLink="/services" (click)="closeBurgerMenu()">Услуги<img src="assets/icons/vector.svg"></li>
+            <ul class="sub_ul">
+              <li>Ресницы</li>
+              <li>Брови</li>
+              <li>Аппаратная косметология</li>
+            </ul>
+            <li>Акции</li>
+            <li>Обучение</li>
+            <li>Сертификаты</li>
+            <li>О нас</li>
+            <li>Контакты</li>
           </ul>
-          <li>Акции</li>
-          <li>Обучение</li>
-          <li>Сертификаты</li>
-          <li>О нас</li>
-          <li>Контакты</li>
-        </ul>
+        </div>
         <div class="vertical-line"></div>
         <div class="burger-menu__nav-additional-titles">
           <ul>
@@ -28,9 +31,10 @@
           </ul>
         </div>
       </div>
-      <button class="btn_online-registration" type="button">Онлайн запись</button>
+
     </div>
     <div class="burger-menu__footer">
+      <button class="btn_online-registration" type="button">Онлайн запись</button>
       <p>+375(44) 543-57-80</p>
       <div class="burger-menu__icons">
         <img src="assets/icons/inst.svg">
@@ -55,6 +59,44 @@
         </div>
         <div class="online-registration__menu" (click)="openChoiceOfServicesMenu()">
           <p>Выбрать услугу</p>
+        </div>
+      </div>
+      <div class="online-registration__footer">
+        <div class="footer-info-contacts">
+          <img id="map_pin" src="assets/icons/map-pin.svg">
+          <p>г.Гомель ул.Жарковского 26 кабинет 67</p>
+        </div>
+        <div class="footer-info-contacts">
+          <img id="phone" src="assets/icons/phone.svg">
+          <p>+375(44) 543-57-80</p>
+        </div>
+        <div class="footer-info-contacts">
+          <img id="clock" src="assets/icons/clock.svg">
+          <p>пн-вс 10:00 — 18:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="online-registration-main-total hidden">
+      <div class="online-registration__header">
+        <img src="assets/icons/logo.svg" (click)="closeRegistrationMenu()" alt="">
+      </div>
+      <div class="total">
+        <div class="total__title">
+          <p class="total__services">Услуги:</p>
+          <hr>
+          <div class="total__info">
+            <h1>14 мая 2023   13:30</h1>
+            <p>RF-лифтинг</p>
+            <p>Внутренняя поверхность рук</p>
+            <p><span>17 Br </span><span>10-20 мин</span></p>
+          </div>
+        </div>
+        <div>
+          <hr class="flex-hr">
+          <div class="total__amount">
+            <span>Итого:</span>
+            <span>17 Br</span>
+          </div>
         </div>
       </div>
       <div class="online-registration__footer">
@@ -888,12 +930,12 @@
         </div>
       </div>
       <div class="confirmation-popup-btns">
-        <button class="confirmation-popup-btn-cancel">Отменить</button>
+        <button class="confirmation-popup-btn-cancel" (click)="closeCheckPopup()">Отменить</button>
         <button class="confirmation-popup-btn-accept" (click)="openForm()">Все верно</button>
       </div>
     </div>
     <div class="choice-of-masters hidden">
-      <div>
+      <div (click)="openOnlineRegistration()">
         <span>Выберите мастера</span>
         <img src="assets/icons/chevron.svg" alt="">
       </div>
@@ -909,25 +951,6 @@
             <p>Мастер бровист, лешмейкер, визажист</p>
           </div>
           <img src="assets/icons/chevron.svg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="total hidden">
-      <div class="total__title">
-        <p class="total__services">Услуги:</p>
-        <hr>
-        <div class="total__info">
-          <h1>14 мая 2023   13:30</h1>
-          <p>RF-лифтинг</p>
-          <p>Внутренняя поверхность рук</p>
-          <p><span>17 Br </span><span>10-20 мин</span></p>
-        </div>
-      </div>
-      <div>
-        <hr class="flex-hr">
-        <div class="total__amount">
-          <span>Итого:</span>
-          <span>17 Br</span>
         </div>
       </div>
     </div>
@@ -970,7 +993,7 @@
         </div>
       </div>
       <div class="customer-form-btn" (click)="openSamary()">
-        <button>Записаться</button>
+        <button><p>Записаться</p></button>
       </div>
     </div>
     <div class="confirmation-card hidden">
@@ -1002,10 +1025,9 @@
         <p id="see-you-soon">До встречи в салоне!</p>
         <div class="confirmation-popup-btns gap-btns">
           <button class="confirmation-popup-btn-cancel" (click)="closeRegistration()">На главную</button>
-          <button class="confirmation-popup-btn-accept">Записаться ещё</button>
+          <button class="confirmation-popup-btn-accept" (click)="registrAgain()">Записаться ещё</button>
         </div>
       </div>
-
     </div>
     <div class="popup-overlay hidden"></div>
   </div>

@@ -156,3 +156,4 @@ insert into masters_operations (master_id, operations_id) values (2, 2);
 insert into entry (master_id, client_name, phone, email, subtype_id, booking_day, starting_time, status) values (1, 'Kirill', '+79217485004', 'kilril01@mail.ru', 4, '2023-05-17', '15:00:00', 'ACTIVE');
 insert into entry (master_id, client_name, phone, email, subtype_id, booking_day, starting_time, status) values (1, 'Kirill', '+79217485004', 'kilril01@mail.ru', 5, '2023-05-19', '12:00:00', 'COMPLETE');
 insert into entry (master_id, client_name, phone, email, subtype_id, booking_day, starting_time, status) values (2, 'Maksim', '+79245674898', 'chikez@mail.ru', 8, '2023-05-17', '17:00:00', 'CANCELED');
+

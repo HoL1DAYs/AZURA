@@ -8,35 +8,25 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  masters: []
+  services: []
+  operationType:[]
   ngOnInit(){
     this.getInfo()
   }
   constructor(private reqService: RequestService, private route: ActivatedRoute) {
   }
-  // shadowSidebar(){
-  //   const burgerMenu = document.querySelector( '.burger_menu');
-  //   const sideBar = document.querySelector('.sidebar')
-  //
-  //   document.addEventListener( 'click', (e) => {
-  //     const withinBoundaries = e.composedPath().includes(burgerMenu);
-  //     const body = document.querySelector('body')
-  //
-  //     if ( ! withinBoundaries ) {
-  //       // @ts-ignore
-  //       sideBar.classList.remove('sidebarNg')
-  //       sideBar.classList.remove('shadow')
-  //       body.classList.remove('overflow')
-  //     }
-  //   })
-  // }
 
 
   getInfo(){
     this.reqService.getMaster().subscribe(data=>{
-      console.log(data)
+      this.masters = data
     })
     this.reqService.getEntry().subscribe(data=>{
-      console.log(data)
+      this.services = data
+    })
+    this.reqService.getOperationType().subscribe(data=>{
+      this.operationType = data
     })
   }
   registrAgain(){
@@ -49,9 +39,10 @@ export class HeaderComponent {
     const registrationMenu = document.querySelector('.online-registration')
     const overlay = document.querySelector('.overlay')
     const onlineRegMain = document.querySelector('.online-registration-main')
+    const body = document.querySelector('body')
+
+    body.classList.add('overflow')
     onlineRegMain.classList.remove('hidden')
-
-
     overlay.classList.remove('hidden')
     registrationMenu.classList.add("show")
   }
@@ -60,9 +51,10 @@ export class HeaderComponent {
   closeRegistrationMenu(){
     const registrationMenu = document.querySelector('.online-registration')
     const overlay = document.querySelector('.overlay')
-    // @ts-ignore
+    const body = document.querySelector('body')
+
+    body.classList.remove('overflow')
     overlay.classList.add('hidden')
-    // @ts-ignore
     registrationMenu.classList.remove("show")
   }
 
@@ -70,17 +62,22 @@ export class HeaderComponent {
   openBurgerMenu() {
     const burger_menu = document.querySelector('.burger-menu')
     const overlay = document.querySelector('.overlay')
+    const body = document.querySelector('body')
 
+    body.classList.add('overflow')
     overlay.classList.remove('hidden')
     burger_menu.classList.add("show")
   }
 
 
   closeBurgerMenu(){
-
+    const body = document.querySelector('body')
     const burger_menu = document.querySelector('.burger-menu')
     const overlay = document.querySelector('.overlay')
+    const registrationMenu = document.querySelector('.online-registration')
 
+    registrationMenu.classList.remove("show")
+    body.classList.remove('overflow')
     overlay.classList.add('hidden')
     burger_menu.classList.remove("show")
 
@@ -169,9 +166,17 @@ export class HeaderComponent {
     const registrationMenu = document.querySelector('.online-registration')
     const confirmationCard = document.querySelector('.confirmation-card')
     const overlay = document.querySelector('.overlay')
+    const body = document.querySelector('body')
+
+    body.classList.remove('overflow')
     registrationMenu.classList.remove("show")
     confirmationCard.classList.add('hidden')
     overlay.classList.add('hidden')
+  }
+
+  registrFromBurgerMenu(){
+    this.closeBurgerMenu()
+    this.openRegistrationMenu()
   }
 
 }

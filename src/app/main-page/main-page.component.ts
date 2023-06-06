@@ -20,6 +20,7 @@ export class MainPageComponent implements OnInit{
   }
   constructor(private reqService: RequestService) {
   }
+
   getInfo(){
     this.reqService.getMaster().subscribe(data=>{
       this.masters = data

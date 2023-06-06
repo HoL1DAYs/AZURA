@@ -127,10 +127,9 @@
         <li>Rf-лифтинг тела:
           <ul>
             <li *ngFor="let operationSubType of operationSubTypes">
-              <hr>
               <div class="offers__list-card">
                 <span>{{operationSubType.name}}</span>
-                <span>{{operationSubType.min}} минут</span>
+                <span class="offers__list-card-duration">{{operationSubType.min}} минут</span>
                 <span>{{operationSubType.price}}₽</span>
               </div>
               <hr>

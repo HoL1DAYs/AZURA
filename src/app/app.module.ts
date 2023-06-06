@@ -10,6 +10,7 @@ import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { OfferPageComponent } from './offer-page/offer-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import { StudyPageComponent } from './study-page/study-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from "@angular/common/http";
     MainPageComponent,
     FooterComponent,
     OffersComponent,
-    OfferPageComponent
+    OfferPageComponent,
+    StudyPageComponent
   ],
   imports: [
     BrowserModule,

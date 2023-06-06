@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  openRegistrationMenu(){
+    const registrationMenu = document.querySelector('.online-registration')
+    const overlay = document.querySelector('.overlay')
+    const onlineRegMain = document.querySelector('.online-registration-main')
+    const body = document.querySelector('body')
+
+    body.classList.add('overflow')
+    onlineRegMain.classList.remove('hidden')
+    overlay.classList.remove('hidden')
+    registrationMenu.classList.add("show")
+  }
+
 }

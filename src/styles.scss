@@ -55,9 +55,7 @@ body{
   align-items: center;
   z-index: 4;
 }
-.header_burger-menu{
 
-}
 
 .btn_online-registration{
   background-color: rgba(178, 86, 169, 1);
@@ -71,8 +69,8 @@ body{
   color: #FCF7FC;
   border: none;
   height: rem(58px);
-
   width: rem(191px);
+  cursor: pointer;
 }
 
 
@@ -137,10 +135,12 @@ body{
 
 .logo{
   width: rem(270px);
+  cursor: pointer;
 }
 
 .header_burger-menu{
   width: rem(60px);
+  cursor: pointer;
 }
 
 .social-media_inst_logo{
@@ -222,6 +222,8 @@ body{
   font-weight: 400;
   line-height: 140%;
   letter-spacing: 0.005em;
+  cursor: pointer;
+
 }
 
 .footer_service_additional li{
@@ -233,6 +235,7 @@ body{
   font-style: normal;
   font-weight: 400;
   color: #080708;
+  cursor: pointer;
 
 }
 
@@ -319,7 +322,8 @@ body{
   border-radius: rem(20px);
 }
 .content{
-  max-width: $maxWidthContainer;
+  max-width: calc($maxWidthContainer - 30px);
+  padding: 0 15px;
   margin: 0 auto;
 }
 #img_3{
@@ -846,6 +850,8 @@ body{
   line-height: rem(15px);
   letter-spacing: 0.004em;
   color: #080708;
+  cursor: pointer;
+
 }
 
 
@@ -872,6 +878,7 @@ body{
   justify-content: space-between;
   .logoX{
     display: none;
+    cursor: pointer;
   }
 }
 
@@ -924,6 +931,7 @@ body{
 
 .header__btn{
   background-color: inherit;
+  cursor: pointer;
 }
 
 
@@ -942,6 +950,35 @@ body{
   opacity: 1;
 }
 
+.study__offer-title{
+  display: flex;
+  justify-content: space-between;
+  gap: rem(34px);
+  h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    /* identical to box height, or 28px */
+
+    letter-spacing: 0.005em;
+
+    /* outline/ black */
+
+    color: #080708;
+  }
+  p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    color: #080708;
+
+  }
+}
 .offers__offer-title{
   display: flex;
   justify-content: space-between;
@@ -991,6 +1028,7 @@ body{
   letter-spacing: 0.005em;
 
   color: #1A1619;
+  cursor: pointer;
 }
 
 .relative-address__current{
@@ -1046,6 +1084,7 @@ body{
 .offers__offer-main{
   display: flex;
   justify-content: space-between;
+  cursor: pointer;
 
 }
 .offers__list-card{
@@ -1065,6 +1104,12 @@ body{
 
   color: #000000;
 }
+.offers__list-card-duration{
+  flex: 1;
+  justify-self: flex-end;
+  text-align: right;
+  margin-right: 100px;
+}
 hr{
   border: 1px solid #D3CED4;
 }
@@ -1081,6 +1126,7 @@ hr{
     ul{
       li{
         margin-bottom: 40px;
+        cursor: pointer;
       }
     }
   }
@@ -1088,13 +1134,12 @@ hr{
     color: #1A1619;
     opacity: 0.5;
   }
-  img{
+  .sub_ul{
     display: none;
   }
-  ul{
-    ul{
-      display: none;
-    }
+
+  img{
+    display: none;
   }
 }
 .burger-menu__nav-additional-titles{
@@ -1112,6 +1157,7 @@ hr{
   color: #1A1619;
   li{
     margin-bottom: 20px;
+    cursor: pointer;
   }
 }
 .overlay{
@@ -1163,6 +1209,7 @@ hr{
 }
 .online-registration__header{
   margin: 5.6% auto;
+  cursor: pointer;
 }
 .online-registration__footer{
   display: block;
@@ -1184,6 +1231,7 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   p{
     font-family: 'Playfair Display';
     font-style: normal;
@@ -1219,6 +1267,9 @@ hr{
   height: 100vh;
   width: 36.5%;
   padding: rem(36px) rem(30px);
+  overflow: auto;
+
+
 }
 
 .choice-of-services {
@@ -1302,6 +1353,26 @@ hr{
     }
   }
 }
+.study__information{
+  h1{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 67px;
+    color: #1A1619;
+  }
+  p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+    color: #000000;
+  }
+}
+
 .gap{
   margin-top: rem(32px);
   margin-bottom: rem(32px);
@@ -1322,6 +1393,13 @@ hr{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: rem(20px);
+
+}
+.study__advantages-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: rem(20px);
+  row-gap: rem(60px);
 }
 .offer__advantages-card{
   display: flex;
@@ -1522,9 +1600,11 @@ hr{
   gap: rem(20px);
   margin-right: rem(15px);
   margin-left: rem(15px);
+  cursor: pointer;
 
 }
 .time-card{
+  cursor: pointer;
   padding: rem(8px) rem(12px);
   gap: rem(10px);
 
@@ -1590,11 +1670,11 @@ hr{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  top: rem(250px);
-  left: rem(-450px);
+  position: absolute;
+  top: calc(50vh - 244px);
+  right: calc(50vw - 220px);
   width: rem(440px);
-  height: rem(489px);
+  height: rem(488px);
   z-index: 12;
 
   background: #F8F5FA;
@@ -1683,12 +1763,14 @@ hr{
 }
 
 .confirmation-popup-btns{
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: rem(38px) rem(44px);
 }
 .confirmation-popup-btn-cancel{
+  cursor: pointer;
   border: 1px solid #B356A9;
   border-radius: rem(12px);
   font-family: 'Montserrat';
@@ -1701,6 +1783,7 @@ hr{
   padding: rem(15px);
 }
 .confirmation-popup-btn-accept{
+  cursor: pointer;
   padding: rem(15px);
   background: #B356A9;
   font-family: 'Montserrat';
@@ -1712,6 +1795,9 @@ hr{
   color: #FCF7FC;
   border-radius: rem(12px);
 }
+.overflow{
+  overflow: hidden;
+}
 
 .choice-of-masters{
   position: fixed;
@@ -1721,6 +1807,8 @@ hr{
   height: 100vh;
   width: 26%;
   padding: rem(36px) rem(30px);
+
+
 
 
   display: flex;
@@ -1745,40 +1833,49 @@ hr{
   padding: 16px 22px;
   width: 100%;
   height: rem(79px);
-  p{
-
-  }
+  cursor: pointer;
+}
+.master-card-img{
+  width: rem(42px);
+  height: rem(42px);
+  margin: 0;
 }
 .select-master{
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: rem(6px) rem(28px);
-  background: #F4EDFA;
+  background: #F8F5FA;;
   box-shadow: 0 0 rem(15px) rgba(0, 0, 0, 0.1);
   border-radius: rem(20px);
   width: 100%;
   height: rem(79px);
-  img{
-    margin-right: rem(25px);
-  }
+}
+.selected-master{
+  background: #F4EDFA;
 }
 .circle-img{
   width: rem(60px);
   height: rem(60px);
   border-radius: 50%;
+  margin-right: rem(25px);
 }
-.master-card{
+
+.master-card {
   display: flex;
   flex-direction: row;
+  justify-self: start;
   justify-content: space-between;
   align-items: center;
-  div{
+
+  div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    h2{
+
+    h2 {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
@@ -1789,7 +1886,8 @@ hr{
       /* text/black */
       color: #1A1619;
     }
-    p{
+
+    p {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
@@ -1802,12 +1900,10 @@ hr{
     }
 
   }
-  img{
-    width: rem(42px);
-    height: rem(42px);
-    margin-right: 0px;
-  }
+
 }
+
+
 
 .total{
   display: flex;
@@ -1939,6 +2035,7 @@ hr{
 }
 
 .customer-info{
+  overflow: auto;
   position: absolute;
   left: -145%;
   top: 0;
@@ -2027,14 +2124,17 @@ hr{
 
 }
 .customer-form-btn{
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 
   button{
+    cursor: pointer;
     border-radius: 20px;
-    padding: 3.48% 34.8%;
+    padding: 3.48% 24.8%;
     margin: 0 15% 8% 15%;
     width: rem(520px);
     height: rem(76px);
@@ -2048,7 +2148,10 @@ hr{
     color: #FCF7FC;
     background: #B356A9;
     display: flex;
+    justify-content: center;
+    align-items: center;
     p{
+      display: flex;
       justify-content: center;
       align-items: center;
     }
@@ -2085,7 +2188,7 @@ hr{
   align-items: center;
   position: absolute;
   top: 0;
-  left: rem(-650px);
+  right: calc(50vw - 300px);
   width: rem(600px);
   height: 100vh;
   z-index: 3;
@@ -2136,12 +2239,13 @@ hr{
 }
 
 .choice-of-masters-btn{
-  position: absolute;
+  cursor: pointer;
+  position: fixed;
   bottom: 0;
   background: #B356A9;
   color: #FCF7FC;
   height: rem(80px);
-  width: 100%;
+  width: 36.5%;
   margin: 0 rem(-30px);
   p{
     font-family: 'Montserrat';
@@ -2150,8 +2254,8 @@ hr{
     font-size: 20px;
     line-height: 140%;
     /* identical to box height, or 28px */
-    margin: auto;
     letter-spacing: 0.005em;
+    margin: auto;
   }
 }
 
@@ -2202,8 +2306,16 @@ hr{
   letter-spacing: 0.0125em;
 
   /* text/write */
-
   color: #FCF7FC;
+  cursor: pointer;
+}
+.close-svg{
+  position: relative;
+  right: 53px;
+  top: 10px;
+  width: 42px;
+  height: 42px;
+  z-index: 100;
 }
 
 
@@ -2213,6 +2325,21 @@ hr{
   }
 }
 @media screen and (max-width: 62.5em) {
+  .study__advantages-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(20px);
+    row-gap: rem(60px);
+  }
+  .burger-menu__nav-titles-main{
+    li:hover .sub_ul{
+      display: flex;
+      flex-direction: column;
+      li{
+        margin-bottom: 10px;
+      }
+    }
+  }
 
   .total{
     width: rem(340px);
@@ -2277,9 +2404,7 @@ hr{
   .burger-menu__nav-additional-titles{
     display: none;
   }
-  .confirmation-popup-card{
-    left: -200%;
-  }
+
   .customer-info{
 
     width: 200%;
@@ -2305,6 +2430,9 @@ hr{
     width: 56.5%;
     right: 43.5%;
   }
+  .choice-of-masters-btn{
+    width: 56.5%;
+  }
 
   .logo{
     height: 70px;
@@ -2322,6 +2450,9 @@ hr{
   .content{
     padding: 15px;
   };
+  .about-us{
+    padding-top: 80px;
+  }
   .about-us_text{
     width: 50%;
   }
@@ -2431,6 +2562,15 @@ hr{
       left: 75px;
     }
   }
+  .feedback_cards{
+    overflow: auto;
+    #btn_1{
+      display: none;
+    }
+    #btn_2{
+      display: none;
+    }
+  }
   .footer-content{
     padding-left: 20px;
   }
@@ -2446,13 +2586,11 @@ hr{
 
 }
 @media screen and (max-width: 48em) {
-  .confirmation-card{
-    width: 100%;
+  .confirmation-popup-card{
+    right: calc(50vw - 262.5px);
   }
-  .confirmation-popup{
-    top: rem(250px);
-    left: calc(-400px + 65%);
-  }
+
+
   .customer-form-btn{
     button{
       padding: 24px 180px;
@@ -2483,9 +2621,7 @@ hr{
     width: calc(23% + 250px);
   }
 
-  .content{
-    margin-top: rem(100px);
-  }
+
   .rectangle{
     width: rem(741px);
   }
@@ -2526,9 +2662,7 @@ hr{
 
     }
   }
-  .confirmation-popup-card{
-    left: -210%;
-  }
+
   .customer-info{
     z-index: 12;
     width: 350%;
@@ -2543,6 +2677,9 @@ hr{
   }
   .choice-of-services{
     z-index: 9;
+    width: 100%;
+  }
+  .choice-of-masters-btn{
     width: 100%;
   }
   .choice-of-masters{
@@ -2595,6 +2732,9 @@ hr{
   .content{
     padding: 15px;
   };
+  .about-us{
+    padding-top: 60px;
+  }
   .about-us_text{
     width: 100%;
   }
@@ -2639,6 +2779,10 @@ hr{
     height: 200px;
     border-radius: 20px;
 
+  }
+  .confirmation-popup{
+    top: calc(50vh - 213.5px);
+    right: calc(50vw - 192.5px);
   }
   .main_png{
     position: absolute;
@@ -2768,18 +2912,16 @@ hr{
   }
 
 }
-@media screen and (max-width: 39em) {
-  .confirmation-popup-card{
-    left: -255%;
-    align-items: center;
-    margin-left: -40px;
-  }
-}
+
 @media screen and (max-width: 30em) {
-  .confirmation-popup{
-    top: rem(250px);
-    left: calc(-400px + 100%);
+  .study__advantages-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(20px);
+    row-gap: rem(60px);
   }
+
+
   .customer-form {
     margin: rem(40px) rem(79px) rem(32px) rem(87px);
   }
@@ -2863,6 +3005,7 @@ hr{
   }
   .footer_service_additional{
     margin-top: -65px;
+
   }
   .services_master{
     display: none;
@@ -2915,6 +3058,9 @@ hr{
   .content{
     padding: 15px;
   };
+  .about-us{
+    padding-top: 20px;
+  }
   .about-us_text{
     width: 100%;
   }
@@ -3095,9 +3241,13 @@ hr{
 }
 @media screen and (max-width: 23em) {
   .confirmation-popup{
-    top: rem(250px);
-    left: calc(-400px + 150%);
+    top: calc(50vh - 183px);
+    right: calc(50vw - 165px);
   }
+  .confirmation-popup-card{
+    right: calc(50vw - 225px);
+  }
+
   .customer-form-btn{
     button{
       padding: 18px 120px;
